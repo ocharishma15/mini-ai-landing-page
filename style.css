@@ -1,0 +1,132 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 120px 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+}
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+/* Problem → Solution Section */
+.problem-solution {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+.problem, .solution {
+    flex: 1 1 400px;
+    margin: 20px;
+}
+.problem h2, .solution h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* Features Section */
+.features {
+    background-color: #f0f0f0;
+    padding: 60px 20px;
+    text-align: center;
+}
+.features h2 {
+    margin-bottom: 40px;
+    color: #333;
+}
+.feature {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.feature:hover {
+    transform: translateY(-5px);
+}
+.feature h3 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+.cta h2 {
+    margin-bottom: 20px;
+}
+.cta p {
+    margin-bottom: 30px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Simple Animations */
+.hero, .problem-solution, .features, .cta {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 0.3s;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .problem-solution {
+        flex-direction: column;
+        align-items: center;
+    }
+}
